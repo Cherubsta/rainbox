@@ -1,29 +1,25 @@
 body {
   color: #353535;
-  font-family: -apple-system, BlinkMacSystemFont, 'Baloo 2', sans-serif;
+  font-family: courier, monospace, sans-serif;
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;  scroll-behavior: smooth;
   font-weight: 800;
   font-size: 70px;
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;  scroll-behavior: smooth;
   font-weight: 800;
   font-size: 56px;
 }
 
 h3 {
-  font-family: 'Montserrat', sans-serif;  scroll-behavior: smooth;
   font-weight: 800;
   font-size: 24px;
 }
 
 p {
   font-size: 20px;
-  opacity: .7;
 }
 
 a {
