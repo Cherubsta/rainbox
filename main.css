@@ -93,6 +93,9 @@ ul {
 .spacing-top-sm {
   padding-top: 20px;
 }
+.spacing-bottom {
+  padding-top: 40px;
+}
 
 .getapp {
   border: 1px solid #FF375F;
@@ -204,4 +207,11 @@ footer {
   height: 5px;
   border-radius: 100%;
   filter: invert(0.5);
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .img {
+    float: right;
+  }
 }
