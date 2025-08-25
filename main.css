@@ -9,7 +9,7 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 p {
@@ -44,6 +44,19 @@ ul {
 }
 .navbar-toggler-icon {
   font-size: 0.8em;
+}
+
+/* Logo */
+.rbx-logo { display:flex; align-items:center; font-weight:700; letter-spacing:.3px; }
+.rbx-mark { height:22px; width:22px; margin-right:8px; }
+.rbx-word { font-weight:700; margin-right:8px; }
+.rbx-sep { opacity:.5; margin:0 8px; }
+
+.avatar {
+  display:block;
+  height:64px;
+  border-radius:50%;
+  object-fit:cover;
 }
 
 .font-red {

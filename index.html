@@ -1,59 +1,183 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="design matters">
     <meta name="keywords" content="design and development">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="shortcut icon" href="https://rainbox.s3.amazonaws.com/favicon.png">
-
+    <link rel="shortcut icon" href="/ssets/favicon.png">
     <title>omar's portfolio</title>
+
+    <style>
+      /* Simple “punk-vibe” logo (subtle bolt) */
+      .rbx-logo svg { height: 26px; vertical-align: -6px; margin-right: 8px; }
+      .navbar-brand { display:flex; align-items:center; font-weight:700; font-size: 1.0REM}
+
+      /* Social icons */
+      .icon { width:20px; display:inline-block; }
+
+      /* Project cards (soft borders) */
+      .project-title small { font-weight:400; }
+
+      .pill { display:inline-block; padding:2px 8px; border:1px solid rgba(0,0,0,0.15); border-radius:999px; font-size:12px; margin-right:6px; color:#555; margin-bottom: 8px;}
+      .link-arrow { text-decoration:none; }
+      .link-arrow:hover { text-decoration:underline; }
+
+      /* Top “hero” band for Visor */
+      .hero-badge {
+        font-size: 12px;
+        border: none;
+        border-radius: 999px;
+        padding: 3px 12px;
+        background: linear-gradient(135deg, #ff6ec4, #7873f5);
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      }
+      .cta { border-radius:32px; padding:8px 14px; border:1px solid #000; color:#000; text-decoration:none; }
+      .cta:hover { text-decoration:none; color:#000; border-color:gray; }
+
+      /* Make X/Threads icons align vertically with envelope */
+      .nav-item .icon { margin-top: 6px; }
+    </style>
   </head>
-  <body style="font-family:courier, monospace;">
+  <body>
     <div class="container" style="max-width:900px">
+
+      <!-- NAV -->
       <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="padding-top: 25px;">
-        <a class="navbar-brand" href="#">omar.hijaz</a>
+        <a class="navbar-brand rbx-logo" href="#">
+          <!-- subtle bolt logo -->
+          <svg class="rbx-mark" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M14 1L3 14h6l-1 9 13-13h-6l1-9z" fill="none" stroke="#000" stroke-width="1.4" />
+          </svg>
+          <span class="rbx-word">rainbox studio</span>
+          <span style="font-weight: 400;">/ omar.hijaz</span>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto">
-            <div class="nav-item" style="padding-top: 21px;">
-              <a href="https://twitter.com/cherubsta?ref_src=twsrc%5Etfw" target="_blank"><img src="https://silofocus1.s3.amazonaws.com/twitter.png" alt="Lamp" height="20px" style="padding-left: 0px"></a>
-            </div>
-            <a style="font-size:36px; color: #353535;" class="nav-item nav-link" href="mailto:omar@rainbox.dev?subject=Hi, Omar">✉︎</a>
-            <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">News</a> -->
+          <div class="navbar-nav ml-auto" style="align-items:center; gap:16px;">
+            <!-- X (Twitter) -->
+            <a class="nav-item nav-link" href="https://x.com/cherubsta" target="_blank" aria-label="X profile">
+              <span>
+                <img class="icon" src="assets/Xlogo.png" alt="X">
+              </span>
+            </a>
+
+            <!-- Threads -->
+            <a class="nav-item nav-link" href="https://www.threads.com/@omar.hijaz" target="_blank" aria-label="Threads profile">
+              <span>
+                <img class="icon" src="assets/threads.png" alt="Threads">
+              </span>
+            </a>
+
+            <!-- Email -->
+            <a style="font-size:32px; color: secondary;" class="nav-item nav-link" href="mailto:omar@rainbox.dev?subject=Hi, Omar">
+               <span>
+                <img class="icon" src="assets/mail.png" alt="Email">
+              </span>
+            </a>
+
+            <!-- Profile thumbnail (top-right) -->
+            <img class="avatar" src="assets/avatar.jpg" alt="Omar Hijaz" title="Omar Hijaz">
           </div>
         </div>
       </nav>
 
-      <div class="row spacing-top-sm">
+      <!-- INTRO -->
+      <div class="row spacing-top">
         <div class="col">
-          <h1 class="d-none d-md-block" style="margin-bottom: 0">product design • prototyping • development</h1>
+          <h1 class="d-none d-md-block" style="margin-bottom: 0">product design • prototypes • development</h1>
           <h1 class="d-md-none d-lg-none d-xl-none" style="margin-bottom: 0">product design <br/>prototyping <br/>& development</h1>
-          <p style="opacity: .85">I'm a UX designer focusing on interface design. My foundation in development strengthens my UI work<span style="font-family:Arial, Helvetica, sans-serif;">&mdash;</span>where applying layout, messaging, and typography help guide the people I design products for.</p>
+          <p style="opacity: .85">I design and build software with a human bent—interfaces that reduce noise, tighten the story, and get people where they’re going.</p>
+          <div class="mb-3">
+            <span class="pill">Figma</span>
+            <span class="pill">Sketch</span>
+            <span class="pill">Adobe XD</span>
+            <span class="pill">Illustrator</span>
+            <span class="pill">Photoshop</span>
+            <span class="pill">Design Systems</span>
+            <span class="pill">Typography</span>
+         
+            <span class="pill">iOS</span>
+            <span class="pill">SwiftUI</span>
+            <span class="pill">Xcode</span>
+            <span class="pill">SwiftData</span>
+            <span class="pill">CloudKit</span>
+            <span class="pill">watchOS</span>
+          
+            <span class="pill">HTML5</span>
+            <span class="pill">CSS3</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Responsive Design</span>
+            <span class="pill">Accessibility</span>
+            <span class="pill">SEO</span>
+          
+            <span class="pill">GitHub</span>
+            <span class="pill">Xcode Cloud</span>
+            <span class="pill">Human-Centered Design</span>
+          </div>
         </div>
       </div>
 
-      <div class="row spacing-top">
+      <!-- Visor (top placement) -->
+      <div class="row spacing-top-lg">
         <div class="col">
-          <img src="https://rainbox.s3.amazonaws.com/vested.png" alt="Lamp" height="240px">
+          <div class="hero">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+              <div class="mb-2">
+                <span class="hero-badge">new app</span>
+              </div>
+            </div>
+            <div class="row spacing-top">
+              <div class="col">
+                <img src="assets/visor.png" alt="Visor app icon" height="300">
+              </div>
+              <div class="col spacing-top-sm">
+                <h2>visor (kid-safe YouTube)</h2>
+                <h5 class="text-muted">founder</h5>
+                
+                <p style="margin-bottom:10px;">
+                  visor makes YouTube safe for families. Approve channels, explore trusted content, and relax knowing your little ones can watch in a space built just for them.
+                </p>
+                <div class="mb-2">
+                  <span class="pill">parental control</span>
+                  <span class="pill">YouTube channels</span>
+                  <span class="pill">kid-friendly</span>
+                </div>
+                <a class="link-arrow" href="https://gotvisor.com" target="_blank">&#9657; gotvisor.com</a>
+                <div class="mb-2 spacing-top-sm">
+                  <a class="cta" href="https://apps.apple.com/app/id6744246412" target="_blank">Download on the App Store</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="row spacing-top-lg">
         <div class="col">
-          <h2>
-            vested<br/><small class="text-muted">cofounder</small>
-          </h2>
-          <p>a finance app that helps you save money by not worrying about saving money</p>
+          <img src="assets/vested.png" alt="Vested" height="240">
+        </div>
+        <div class="col spacing-top-sm">
+          <h2>vested (savings app)</h2>
+          <h5 class="text-muted">cofounder</small></h5>
+          <p>A finance app that helps you save money by not worrying about saving money.</p>
+          <div class="mb-2">
+            <span class="pill">finance</span>
+            <span class="pill">savings</span>
+            <span class="pill">behavioral design</span>
+          </div>
           <a data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1">&#9657; about</a>
           <div class="collapse" id="collapse-1">
             <div class="card card-body">
-              A friend and I set out to tackle what we saw as a serious problem: people have a hard time saving money. By creating what we call “a FitBit for saving,” we believe it’s possible to encourage healthy financial behavior in a simple and fun way. We started by hosting a series of interviews to gain insights and validate our assumptions. The biggest challenge was onboarding new users given the complexity and sensitivity of finances. This is a case where "simple" proved to be difficult to attain. After a series of rapid prototyping iterations, our MVP was ready for development. We handed off an interactive prototype and design assets to a developer agency. On a daily basis, I consult with the team to review architectural decisions, ensure quality, and iron out bugs. The app is in the early alpha stage as we continue to test and prepare for release.
+              A friend and I set out to tackle what we saw as a serious problem: people have a hard time saving money...
             </div>
           </div>
           <div><a href="https://vestedapp.com" target="_blank">&#9657; vestedapp.com</a></div>
@@ -63,37 +187,47 @@
 
       <div class="row spacing-top-lg">
         <div class="col">
-          <img src="https://rainbox.s3.amazonaws.com/silo.png" alt="Lamp" height="240px">
+          <img src="assets/silo.png" alt="silo" height="240">
         </div>
-        <div class="col">
-          <h2>
-            silo<br/><small class="text-muted">personal project</small>
-          </h2>
-          <p>a productivity tool designed for the apple watch to help you focus and get things done</p>
+        <div class="col spacing-top-sm">
+          <h2>silo (WATCH pomodoro)</h2>
+          <h5 class="text-muted">personal project</h5>
+          <p>A productivity tool for Apple Watch to help you focus and get things done.</p>
+          <div class="mb-2">
+            <span class="pill">productivity</span>
+            <span class="pill">Apple Watch</span>
+            <span class="pill">focus</span>
+          </div>
           <a data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse-2">&#9657; about</a>
           <div class="collapse" id="collapse-2">
             <div class="card card-body">
-              Around the time the Apple Watch was announced I was inspired by its haptic technology and decided to build an app around it. The idea is based on the Pomodoro Technique, which involves focus-break cycles and a noisy tomato timer. My biggest insight happened when I imagined someone with a loud timer in a quiet library. As it turns out, a silent tap on the wrist makes for a subtle and effective solution. Much of the challenge of this project involved working with a very restricted watchOS API. On the graphics side, the design of the tick markers was also a challenge—though it proved to be a great way to sharpen my design skills.  As for the user experience, the overarching idea was to make you feel like you had a productivity-superpower. The simplicity of silo resonates with a number of different target audiences and became a nice success on the App Store. I have since followed it up with Silo Zen, for meditation, and Silo Trainer, for HIIT workouts.
+              Around the time the Apple Watch was announced I was inspired by its haptics and built an app around it...
             </div>
           </div>
           <div><a href="https://silofocus.com" target="_blank">&#9657; silofocus.com</a></div>
-          <div><a href="https://appsto.re/us/PROWab.i">&#9657; app download</a></div>
+          <div class="mb-2 spacing-top-sm">
+            <a class="cta" href="https://appsto.re/us/PROWab.i" target="_blank">Download on the App Store</a>
+          </div>
         </div>
       </div>
 
       <div class="row spacing-top-lg">
         <div class="col">
-          <img src="https://rainbox.s3.amazonaws.com/helm.png" alt="Lamp" height="240px">
+          <img src="assets/helm.png" alt="helm" height="240">
         </div>
-        <div class="col">
-          <h2>
-            helm<br/><small class="text-muted">personal project</small>
-          </h2>
-          <p>a journal for your most memorable dreams and inducer to help you explore the world of lucid dreaming</p>
+        <div class="col spacing-top-sm">
+          <h2>helm (dream recorder)<h2/>
+          <h5 class="text-muted">personal project</h5>
+          <p>A journal for memorable dreams and inducer tools to explore lucid dreaming.</p>
+          <div class="mb-2">
+            <span class="pill">lucid dreaming</span>
+            <span class="pill">journal</span>
+            <span class="pill">sleep</span>
+          </div>
           <a data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3">&#9657; about</a>
           <div class="collapse" id="collapse-3">
             <div class="card card-body">
-              Helm, which translates to dream in Arabic, is an app I’ve been designing to explore dreams. For some time I mulled over the question: “What if you could wake up inside a dream, experience impossible journeys, and improve your waking life?” If you’ve ever had a lucid dream, you know that it is quite a unique and empowering experience. While there are well-documented techniques to induce lucid dreams, they are cumbersome and require a good deal of time to master. In this project, I aim to make it not only easier to attain lucidity, but to turn dreams into virtual experiences you can learn and grow from. As an app that I myself would use, I am taking my time to thoughtfully design a delightful experience. One challenge I find exciting about this project is carefully choosing the design affordances, since it deals with two different user interfaces (watch and phone).
+              Helm (dream in Arabic) is an app I’ve been designing to explore dreams...
             </div>
           </div>
           <div><a href="https://marvelapp.com/prototype/86ei853" target="_blank">&#9657; prototype</a></div>
@@ -102,47 +236,78 @@
 
       <div class="row spacing-top-lg">
         <div class="col">
-          <img style="padding-left: 0px" src="https://rainbox.s3.amazonaws.com/health.png" alt="Lamp" height="260px">
+          <img style="padding-left: 0px" src="assets/health.png" alt="health.me" height="260">
         </div>
-        <div class="col">
-          <h2>
-            health.me<br/><small class="text-muted">collaboration</small>
-          </h2>
-          <p>a tool to help people navigate complex health insurance plans and select one that works best</p>
+        <div class="col spacing-top-sm">
+          <h2>health.me (insurance)<h2/>
+          <h5 class="text-muted">collaboration</h5>
+          <p>A tool to help people navigate complex health insurance plans and pick what works best.</p>
+          <div class="mb-2">
+            <span class="pill">health</span>
+            <span class="pill">insurance</span>
+          </div>
           <a data-toggle="collapse" href="#collapse-5" role="button" aria-expanded="false" aria-controls="collapse-5">&#9657; about</a>
           <div class="collapse" id="collapse-5">
             <div class="card card-body">
-              This was a collaboration with a doctoral student conducting their dissertation on health plan choices. Working together, we designed what would become a web app for a decision-making tool that compared health plans offered by Tufts University. The general idea was to create a simple flow for staff members that guided them through a series of questions. Based on their entries, the consecutive screens would update with information about different health plans and the complexities of health insurance in general. At the end of the flow, members were shown different cards of each plan with a rating system of up to five stars (in our case hearts) to help them decide on a plan that best suited their needs and preferences.
+              Collaboration with a doctoral student on a decision-making tool for comparing health plans...
             </div>
           </div>
           <div><a href="https://marvelapp.com/prototype/32ia5ei" target="_blank">&#9657; prototype</a></div>
         </div>
       </div>
 
-      <div class="row spacing-top-lg spacing-bottom">
+      <div class="row spacing-top-lg">
         <div class="col">
-          <img src="https://rainbox.s3.amazonaws.com/tedx.png" alt="Lamp" height="240px">
+          <img src="assets/tedx.png" alt="TEDx" height="240">
         </div>
-        <div class="col">
-          <h2>
-            TEDx<br/><small class="text-muted">collaboration</small>
-          </h2>
-          <p>a design effort for a logo and asset rebranding of Boston’s TEDx Youth organization</p>
+        <div class="col spacing-top-sm">
+          <h2>TEDx (logo design)<h2/>
+          <h5 class="text-muted">collaboration</h5>
+          <p>A design effort for logo and asset rebranding for Boston’s TEDx Youth organization.</p>
+          <div class="mb-2">
+            <span class="pill">branding</span>
+            <span class="pill">logo design</span>
+            <span class="pill">collaboration</span>
+          </div>
           <a data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4">&#9657; about</a>
           <div class="collapse" id="collapse-4">
             <div class="card card-body">
-              This was a pro bono effort hosted by the Make a Mark organization. Three other designers and I were tasked to redesign a logo and branding material for TEDx Youth. We were given only 12 hours to complete the two tasks. We started out by sketching our ideas which we were to share with the client during a one-time preliminary meeting. After receiving feedback, we worked together to brainstorm and combine the best ideas we had. The result was a net positive collaborative effort that illuminated the power of teamwork. As an example, one of the designers had unknowingly sketched what looked to be the shape of the X, a second designer happened to notice that the X could simultaneously appear as an X and Y, meanwhile a third designer had the skillset to execute the logo beautifully. With the logo as our North Star, we were able to quickly execute the remaining branding assets. This experience also exemplified how the constraint of time and limited resources can work in your favor.
+              Pro bono via Make a Mark—our team redesigned the logo and branding in 12 hours...
             </div>
           </div>
           <div><a href="https://tedxboston.com" target="_blank">&#9657; tedxboston.com</a></div>
         </div>
       </div>
-    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <!-- NEW: Hair stylist landing (bottom placement) -->
+      <div class="row spacing-top-lg spacing-bottom">
+        <div class="col">
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-5 text-center">
+                <img src="assets/hairconcierge.png" alt="Hair Concierge landing" height="300">
+              </div>
+              <div class="col spacing-top-sm">
+                <h2>Hair Concierge (booking website)<h2/>
+                <h5 class="text-muted">design and dev</h5>
+                <p>
+                  A clean, conversion-ready landing experience for a stylist: services up front, simple booking flow, and copy that speaks to occasion, style, and trust. Built lightweight so it loads fast and looks great on mobile.
+                </p>
+                <div class="mb-2">
+                  <span class="pill">branding</span>
+                  <span class="pill">booking UX</span>
+                </div>
+                <a class="link-arrow" href="https://hairconcierge.me" target="_blank">&#9657; hairconcierge.me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
   </body>
 </html>
