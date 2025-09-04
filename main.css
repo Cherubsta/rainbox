@@ -1,24 +1,44 @@
+/* ---------- Base body text ---------- */
 body {
-  color: #353535;
-  font-family: courier, monospace, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ---------- Paragraphs ---------- */
+p {
+  font-size: 20px;
+  padding-top: 0.8rem;
+  /* Helvetica body font is inherited from body, no need to restate */
+}
+
+/* ---------- Courier accents ---------- */
+.code-block,
+.pill {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+
+/* ---------- Headings use Courier ---------- */
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Courier New", Courier, monospace;
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 34px;
 }
 
 h2 {
+  font-weight: 600;
   font-size: 24px;
 }
 
-p {
-  font-size: 20px;
-  padding-top: 0.8rem
-}
-
 a {
-  color: #B067FF;
+  color: #c28afe;
   font-size: 1.2rem;
 }
 a, a:visited, a:hover, a:active {
@@ -37,6 +57,37 @@ ul {
   padding-left: 0;
   font-size: 20px;
 }
+
+/* Simple “punk-vibe” logo (subtle bolt) */
+.rbx-logo svg { height: 26px; vertical-align: -6px; margin-right: 8px; }
+.navbar-brand { display:flex; align-items:center; font-weight:700; font-size: 1.0REM}
+
+/* Social icons */
+.icon { width:20px; display:inline-block; }
+.logo { height: 25px; padding-left: 0px; padding-right: 4px; }
+/* Project cards (soft borders) */
+.project-title small { font-weight:400; }
+
+.pill { display:inline-block; padding:2px 8px; border:1px solid rgba(0,0,0,0.15); border-radius:999px; font-size:12px; margin-right:6px; color:#555; margin-bottom: 8px;}
+.link-arrow { text-decoration:none; }
+.link-arrow:hover { text-decoration:underline; }
+
+/* Top “hero” band for Visor */
+.hero-badge {
+  font-size: 12px;
+  border: none;
+  border-radius: 999px;
+  padding: 3px 12px;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.cta { font-size: 16px; border-radius:8px; padding:10px; border:1px solid #666; color:#666; text-decoration:none; }
+.cta:hover { text-decoration:none; color:#999; border-color:gray; }
+
+/* Make X/Threads icons align vertically with envelope */
+.nav-item .icon { margin-top: 6px; }
 
 .navbar {
   padding: 0.1rem;
